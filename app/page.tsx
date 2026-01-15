@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 interface FileUploadStatus {
@@ -9,7 +9,7 @@ interface FileUploadStatus {
   error?: string;
 }
 
-export default function Home() {
+function UploadForm() {
   const searchParams = useSearchParams();
   const [eventCode, setEventCode] = useState("");
   const [files, setFiles] = useState<File[]>([]);
@@ -394,3 +394,14 @@ export default function Home() {
   );
 }
 
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-yellow-200 text-2xl animate-pulse">Loading...</div>
+      </div>
+    }>
+      <UploadForm />
+    </Suspense>
+  );
+}
