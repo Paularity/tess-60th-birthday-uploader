@@ -371,14 +371,12 @@ function UploadForm() {
           </div>
         ) : (
           <div className="text-center space-y-6 sm:space-y-8 py-6 sm:py-8 animate-fade-in-up">
-            <div className="text-7xl sm:text-8xl md:text-9xl animate-bounce" style={{ animationDuration: '1.2s' }}>✨🎉✨</div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-200 animate-pulse drop-shadow-[0_2px_8px_rgba(251,191,36,0.9)] px-2">
               Successfully Uploaded!
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-yellow-100 font-semibold px-4 animate-fade-in-up drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
               Thank you for contributing to Tess&apos;s 60th birthday celebration! 🎂
             </p>
-            <div className="text-5xl sm:text-6xl animate-float">🌟🎂🌟</div>
             <button
               onClick={handleUploadMore}
               className="bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 hover:from-yellow-400 hover:via-yellow-300 hover:to-yellow-400 text-amber-950 font-bold py-4 sm:py-5 md:py-6 px-8 sm:px-10 md:px-12 rounded-xl sm:rounded-2xl transition-all duration-700 shadow-2xl shadow-yellow-500/60 hover:shadow-yellow-400/90 hover:scale-[1.05] active:scale-95 transform border-2 border-yellow-300 group animate-fade-in-up" style={{ animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards' }}
