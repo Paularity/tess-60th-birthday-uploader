@@ -187,7 +187,7 @@ function UploadForm() {
   };
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden py-12 px-4">
+    <div className="min-h-screen bg-black relative overflow-hidden py-6 sm:py-12 px-3 sm:px-4">
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-950 to-black animate-gradient-shift"></div>
       <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(251, 191, 36, 0.15) 0%, transparent 50%)', animation: 'float 6s ease-in-out infinite' }}></div>
       <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, rgba(251, 191, 36, 0.4) 1px, transparent 1px)', backgroundSize: '50px 50px', opacity: 0.2 }}></div>
@@ -242,23 +242,23 @@ function UploadForm() {
           animation: sparkle 3s ease-in-out infinite;
         }
       `}</style>
-      <div className="max-w-3xl mx-auto bg-gradient-to-b from-gray-950 via-black to-gray-950 border-4 border-yellow-600 rounded-3xl shadow-2xl shadow-yellow-600/60 p-10 animate-fade-in-up relative overflow-hidden backdrop-blur-sm">
+      <div className="max-w-3xl mx-auto bg-gradient-to-b from-gray-950 via-black to-gray-950 border-2 sm:border-4 border-yellow-600 rounded-2xl sm:rounded-3xl shadow-2xl shadow-yellow-600/60 p-4 sm:p-6 md:p-10 animate-fade-in-up relative overflow-hidden backdrop-blur-sm">
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-600/5 via-transparent to-yellow-600/5 animate-shimmer"></div>
-        <div className="absolute top-10 left-10 text-4xl animate-sparkle text-yellow-500" style={{ animationDelay: '0s' }}>✨</div>
-        <div className="absolute top-20 right-20 text-3xl animate-sparkle text-yellow-400" style={{ animationDelay: '0.5s' }}>⭐</div>
-        <div className="absolute bottom-20 left-20 text-3xl animate-sparkle text-yellow-500" style={{ animationDelay: '1s' }}>🌟</div>
-        <div className="absolute bottom-10 right-10 text-4xl animate-sparkle text-yellow-400" style={{ animationDelay: '1.5s' }}>✨</div>
-        <div className="text-center mb-10 relative z-10">
-          <h1 className="text-7xl font-extrabold text-yellow-100 drop-shadow-[0_2px_8px_rgba(251,191,36,0.8)] font-elegant mb-6">
+        <div className="absolute top-4 left-4 sm:top-10 sm:left-10 text-2xl sm:text-4xl animate-sparkle text-yellow-500" style={{ animationDelay: '0s' }}>✨</div>
+        <div className="absolute top-8 right-8 sm:top-20 sm:right-20 text-xl sm:text-3xl animate-sparkle text-yellow-400" style={{ animationDelay: '0.5s' }}>⭐</div>
+        <div className="absolute bottom-8 left-8 sm:bottom-20 sm:left-20 text-xl sm:text-3xl animate-sparkle text-yellow-500" style={{ animationDelay: '1s' }}>🌟</div>
+        <div className="absolute bottom-4 right-4 sm:bottom-10 sm:right-10 text-2xl sm:text-4xl animate-sparkle text-yellow-400" style={{ animationDelay: '1.5s' }}>✨</div>
+        <div className="text-center mb-6 sm:mb-10 relative z-10">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-yellow-100 drop-shadow-[0_2px_8px_rgba(251,191,36,0.8)] font-elegant mb-4 sm:mb-6">
             60th
           </h1>
-          <h2 className="text-5xl font-bold mb-4 text-yellow-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-calligraphy tracking-wide">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-yellow-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-calligraphy tracking-wide px-2">
             Tess&apos;s Birthday Celebration
           </h2>
-          <p className="text-2xl text-yellow-100 font-semibold mb-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
+          <p className="text-lg sm:text-xl md:text-2xl text-yellow-100 font-semibold mb-2 sm:mb-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)] px-2">
             Capture & Share Your Cherished Moments
           </p>
-          <p className="text-lg text-yellow-200 mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+          <p className="text-base sm:text-lg text-yellow-200 mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] px-2">
             Celebrating six decades of joy, love, and unforgettable memories
           </p>
         </div>
@@ -266,10 +266,10 @@ function UploadForm() {
         {!allComplete ? (
           <div className="space-y-6">
             {globalError && (
-              <div className="p-5 bg-red-950 border-2 border-red-500 rounded-xl flex items-start gap-3 animate-fade-in-up shadow-lg shadow-red-500/30">
-                <span className="text-red-300 text-3xl animate-pulse">⚠️</span>
+              <div className="p-3 sm:p-5 bg-red-950 border-2 border-red-500 rounded-xl flex items-start gap-2 sm:gap-3 animate-fade-in-up shadow-lg shadow-red-500/30">
+                <span className="text-red-300 text-2xl sm:text-3xl animate-pulse">⚠️</span>
                 <div className="flex-1">
-                  <p className="text-base font-semibold text-red-100">
+                  <p className="text-sm sm:text-base font-semibold text-red-100">
                     {globalError}
                   </p>
                 </div>
@@ -277,10 +277,10 @@ function UploadForm() {
             )}
 
             {eventCodeError && (
-              <div className="p-5 bg-amber-950 border-2 border-amber-500 rounded-xl flex items-start gap-3 animate-fade-in-up shadow-lg shadow-amber-500/30">
-                <span className="text-amber-300 text-3xl animate-pulse">🔐</span>
+              <div className="p-3 sm:p-5 bg-amber-950 border-2 border-amber-500 rounded-xl flex items-start gap-2 sm:gap-3 animate-fade-in-up shadow-lg shadow-amber-500/30">
+                <span className="text-amber-300 text-2xl sm:text-3xl animate-pulse">🔐</span>
                 <div className="flex-1">
-                  <p className="text-base font-semibold text-amber-100">
+                  <p className="text-sm sm:text-base font-semibold text-amber-100">
                     {eventCodeError}
                   </p>
                 </div>
@@ -303,51 +303,51 @@ function UploadForm() {
                 <button
                   onClick={() => fileInputRef.current?.click()}
                   disabled={uploading}
-                  className="w-full bg-gradient-to-br from-amber-700/80 via-yellow-600/70 to-amber-700/80 hover:from-amber-600/90 hover:via-yellow-500/80 hover:to-amber-600/90 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed text-yellow-50 font-bold py-12 px-8 rounded-3xl transition-all duration-700 shadow-2xl shadow-amber-600/40 hover:shadow-amber-500/60 hover:scale-[1.03] active:scale-95 transform border-4 border-amber-600/60 group relative overflow-hidden"
+                  className="w-full bg-gradient-to-br from-amber-700/80 via-yellow-600/70 to-amber-700/80 hover:from-amber-600/90 hover:via-yellow-500/80 hover:to-amber-600/90 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed text-yellow-50 font-bold py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 rounded-2xl sm:rounded-3xl transition-all duration-700 shadow-2xl shadow-amber-600/40 hover:shadow-amber-500/60 hover:scale-[1.02] sm:hover:scale-[1.03] active:scale-95 transform border-2 sm:border-4 border-amber-600/60 group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/20 to-transparent animate-shimmer"></div>
-                  <div className="flex flex-col items-center gap-4 relative z-10">
-                    <span className="text-8xl group-hover:scale-110 transition-transform duration-700 animate-float">📸</span>
-                    <span className="text-5xl group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">Upload Your Memories</span>
-                    <span className="text-2xl font-normal opacity-90 group-hover:opacity-100 transition-opacity duration-500">Click to select photos & videos</span>
-                    <span className="text-lg font-normal opacity-80 group-hover:opacity-95 mt-2 transition-opacity duration-500">✨ Automatic upload after selection ✨</span>
+                  <div className="flex flex-col items-center gap-3 sm:gap-4 relative z-10">
+                    <span className="text-6xl sm:text-7xl md:text-8xl group-hover:scale-110 transition-transform duration-700 animate-float">📸</span>
+                    <span className="text-3xl sm:text-4xl md:text-5xl group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] text-center px-2">Upload Your Memories</span>
+                    <span className="text-lg sm:text-xl md:text-2xl font-normal opacity-90 group-hover:opacity-100 transition-opacity duration-500 text-center px-2">Click to select photos & videos</span>
+                    <span className="text-base sm:text-lg font-normal opacity-80 group-hover:opacity-95 mt-1 sm:mt-2 transition-opacity duration-500 text-center px-2">✨ Automatic upload after selection ✨</span>
                   </div>
                 </button>
               ) : uploading ? (
-                <div className="w-full bg-gradient-to-br from-amber-100 to-yellow-100 border-4 border-amber-400 py-12 px-8 rounded-3xl shadow-2xl shadow-amber-500/50 animate-pulse">
-                  <div className="flex flex-col items-center gap-5">
-                    <span className="text-8xl animate-spin" style={{ animationDuration: '3s' }}>✨</span>
-                    <span className="text-5xl font-bold text-amber-900 animate-pulse">Uploading...</span>
-                    <span className="text-2xl text-amber-800 font-medium animate-fade-in-up">Your precious memories are being saved</span>
+                <div className="w-full bg-gradient-to-br from-amber-100 to-yellow-100 border-2 sm:border-4 border-amber-400 py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 rounded-2xl sm:rounded-3xl shadow-2xl shadow-amber-500/50 animate-pulse">
+                  <div className="flex flex-col items-center gap-4 sm:gap-5">
+                    <span className="text-6xl sm:text-7xl md:text-8xl animate-spin" style={{ animationDuration: '3s' }}>✨</span>
+                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-900 animate-pulse text-center">Uploading...</span>
+                    <span className="text-lg sm:text-xl md:text-2xl text-amber-800 font-medium animate-fade-in-up text-center px-2">Your precious memories are being saved</span>
                   </div>
                 </div>
               ) : null}
 
               {fileError && (
-                <div className="p-6 bg-red-100 border-2 border-red-500 rounded-xl shadow-xl shadow-red-400/30 animate-fade-in-up">
-                  <p className="text-xl font-semibold text-red-900 flex items-center justify-center gap-3">
-                    <span className="text-3xl animate-pulse">❌</span> {fileError}
+                <div className="p-4 sm:p-6 bg-red-100 border-2 border-red-500 rounded-xl shadow-xl shadow-red-400/30 animate-fade-in-up">
+                  <p className="text-lg sm:text-xl font-semibold text-red-900 flex items-center justify-center gap-2 sm:gap-3 text-center">
+                    <span className="text-2xl sm:text-3xl animate-pulse">❌</span> <span>{fileError}</span>
                   </p>
                 </div>
               )}
             </div>
 
             {uploadStatuses.length > 0 && (
-              <div className="mt-8 space-y-3 animate-fade-in-up">
-                <h3 className="text-3xl font-bold text-yellow-100 mb-4 flex items-center gap-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <div className="mt-6 sm:mt-8 space-y-2 sm:space-y-3 animate-fade-in-up">
+                <h3 className="text-2xl sm:text-3xl font-bold text-yellow-100 mb-3 sm:mb-4 flex items-center gap-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   <span className="animate-pulse">📸</span> Upload Progress:
                 </h3>
                 {uploadStatuses.map((status, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between p-4 bg-white/90 rounded-xl border-2 border-amber-400 shadow-lg hover:border-amber-500 hover:shadow-amber-400/30 transition-all duration-500 hover:scale-[1.02] animate-fade-in-up"
+                    className="flex items-center justify-between p-3 sm:p-4 bg-white/90 rounded-lg sm:rounded-xl border-2 border-amber-400 shadow-lg hover:border-amber-500 hover:shadow-amber-400/30 transition-all duration-500 hover:scale-[1.02] animate-fade-in-up gap-2"
                     style={{ animationDelay: `${index * 0.1}s`, opacity: 0, animationFillMode: 'forwards' }}
                   >
-                    <span className="text-base font-medium text-amber-950 truncate max-w-xs">
+                    <span className="text-sm sm:text-base font-medium text-amber-950 truncate flex-1 min-w-0">
                       {status.name}
                     </span>
                     <span
-                      className={`text-sm font-medium px-3 py-1 rounded-full ${status.status === "success"
+                      className={`text-xs sm:text-sm font-medium px-2 sm:px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0 ${status.status === "success"
                         ? "bg-green-100 text-green-800 border border-green-400"
                         : status.status === "error"
                           ? "bg-red-100 text-red-800 border border-red-400"
@@ -370,21 +370,21 @@ function UploadForm() {
             )}
           </div>
         ) : (
-          <div className="text-center space-y-8 py-8 animate-fade-in-up">
-            <div className="text-9xl animate-bounce" style={{ animationDuration: '1.2s' }}>✨🎉✨</div>
-            <h2 className="text-5xl font-extrabold text-yellow-200 animate-pulse drop-shadow-[0_2px_8px_rgba(251,191,36,0.9)]">
+          <div className="text-center space-y-6 sm:space-y-8 py-6 sm:py-8 animate-fade-in-up">
+            <div className="text-7xl sm:text-8xl md:text-9xl animate-bounce" style={{ animationDuration: '1.2s' }}>✨🎉✨</div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-200 animate-pulse drop-shadow-[0_2px_8px_rgba(251,191,36,0.9)] px-2">
               Successfully Uploaded!
             </h2>
-            <p className="text-2xl text-yellow-100 font-semibold px-4 animate-fade-in-up drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
+            <p className="text-lg sm:text-xl md:text-2xl text-yellow-100 font-semibold px-4 animate-fade-in-up drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
               Thank you for contributing to Tess&apos;s 60th birthday celebration! 🎂
             </p>
-            <div className="text-6xl animate-float">🌟🎂🌟</div>
+            <div className="text-5xl sm:text-6xl animate-float">🌟🎂🌟</div>
             <button
               onClick={handleUploadMore}
-              className="bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 hover:from-yellow-400 hover:via-yellow-300 hover:to-yellow-400 text-amber-950 font-bold py-6 px-12 rounded-2xl transition-all duration-700 shadow-2xl shadow-yellow-500/60 hover:shadow-yellow-400/90 hover:scale-[1.05] active:scale-95 transform border-2 border-yellow-300 group animate-fade-in-up" style={{ animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards' }}
+              className="bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 hover:from-yellow-400 hover:via-yellow-300 hover:to-yellow-400 text-amber-950 font-bold py-4 sm:py-5 md:py-6 px-8 sm:px-10 md:px-12 rounded-xl sm:rounded-2xl transition-all duration-700 shadow-2xl shadow-yellow-500/60 hover:shadow-yellow-400/90 hover:scale-[1.05] active:scale-95 transform border-2 border-yellow-300 group animate-fade-in-up" style={{ animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards' }}
             >
-              <span className="flex items-center justify-center gap-3 text-xl">
-                <span className="text-3xl">➕</span> Upload More Memories
+              <span className="flex items-center justify-center gap-2 sm:gap-3 text-lg sm:text-xl">
+                <span className="text-2xl sm:text-3xl">➕</span> Upload More Memories
               </span>
             </button>
           </div>
